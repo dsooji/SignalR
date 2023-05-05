@@ -1,0 +1,50 @@
+<head>
+
+    <style>
+        .icon {
+            margin-right: -1390px;
+        }
+
+        ul {
+            color: rgb(113, 24, 24);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                </div>
+                <!-- <div class="loginbtn">
+                <button id="notifications" class="fa fa-bell has-badge popover" type="button">
+                    <span class="notifications__badge" data-badge>12</span>
+                </button>
+            </div> -->
+
+                <span class="icon" [class.has-notification]="hasNotification">
+                    <i class="fa fa-bell has-badge popover" type="button"></i>
+                    <span class="notifications__badge">{{notificationCount}}</span>
+                    <app-popup *ngIf="showPopup" ></app-popup>
+                </span>
+               
+
+                <button class="logout-button"  routerLink="/Login">LogOut
+
+                  </button>
+                  
+            </div>
+        </div>
+<br>
+<br>
+<br>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> </div>
+        </div>
+    </div>
+</body>
+

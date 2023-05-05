@@ -1,0 +1,27 @@
+<div>
+  <h2>Send Email</h2>
+  <br>
+  <br>
+  <form [formGroup]="emailForm">
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control"  formControlName="from" id="from" placeholder="" >
+      <label for="floatingInput">Form</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" formControlName="to" id="to" placeholder="">
+      <label for="floatingPassword">To</label>
+    </div>
+    <br>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" formControlName="subject" id="subject" placeholder="">
+      <label for="floatingInput">Subject</label>
+    </div>
+    <div class=""><input type="text" class="form-control" formControlName="body" id="body" placeholder="">
+      <label for="floatingPassword">Body</label>
+    </div>
+    <br>
+    <br>
+    <button (click)="Submit()" type="button" class="btn btn-primary">Send</button>
+    <!-- <button Url="http://localhost:4200/Home" type="button" class="btn btn-danger mt-1">cancel</button> -->
+  </form>
+</div>

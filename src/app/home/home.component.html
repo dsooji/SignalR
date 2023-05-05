@@ -1,0 +1,51 @@
+<app-master-page>
+
+</app-master-page>
+
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+<style>
+  #sendbtn{
+    margin-top: 90px;
+  }
+  p{
+    text-align: right;
+    color: rgb(3, 3, 9);
+  }
+  b{
+    color: rgb(255, 0, 43);
+  }
+</style>
+
+
+<button type="button" id="sendbtn" class="btn btn-primary" (click)="send()">Compose</button>
+
+<div>
+<p> Welcome:-<b>{{email}}</b>
+</p>
+</div>
+
+  <table  class="table table-bordered" *ngIf="emails && emails.length > 0">
+      <thead>
+     
+        <th>From</th>
+        <th>Subject</th>
+        <th>Body</th>
+        <th> </th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let email of emails">
+              <td>{{ email.from }}</td>
+              <td>{{ email.subject }}</td>
+              <td>{{ email.body }}</td>
+              
+              <td>
+                <button class="btn btn-info btn-sm" (click)="deleteEmail(email.to)">Delete</button>
+             
+              </td>
+             </tr>
+            
+      </tbody>
+  </table>
+
